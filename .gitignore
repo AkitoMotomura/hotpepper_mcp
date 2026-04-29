@@ -1,4 +1,5 @@
 .env
+hotpeper_api.md
 __pycache__/
 *.pyc
 *.pyo
