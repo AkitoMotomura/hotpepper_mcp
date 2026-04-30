@@ -1,5 +1,5 @@
 # hotpepper_mcp
-
+https://zenn.dev/articles/6d6852f6ee43e3/edit
 HotPepper Gourmet API を [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) サーバーとして公開するプロジェクト。  
 Claude などの AI エージェントからレストラン検索・マスタデータ取得ができる。  
 オプションで Google Places API と連携し、評価・口コミ・営業時間を自動付加する。
