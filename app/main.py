@@ -26,7 +26,8 @@ async def lifespan(app: FastAPI):
     register_gourmet_tools(mcp, _client, _google_client)
     register_shop_tools(mcp, _client, _google_client)
     register_master_tools(mcp, _client)
-    yield
+    async with mcp.session_manager.run():
+        yield
     await _client.aclose()
     if _google_client:
         await _google_client.aclose()
@@ -40,4 +41,4 @@ async def health():
     return {"status": "ok"}
 
 
-app.mount("/", mcp.sse_app())
+app.mount("/", mcp.streamable_http_app())
